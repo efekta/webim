@@ -1,55 +1,55 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Light"), local("Ubuntu-Light"), url("ubuntulight.woff2") format("woff2"), url("ubuntulight.woff") format("woff"), url("ubuntulight.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntulight.woff2") format("woff2"), url("../fonts/ubuntu/ubuntulight.woff") format("woff"), url("../fonts/ubuntu/ubuntulight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Light Italic"), local("Ubuntu-LightItalic"), url("ubuntulightitalic.woff2") format("woff2"), url("ubuntulightitalic.woff") format("woff"), url("ubuntulightitalic.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntulightitalic.woff2") format("woff2"), url("../fonts/ubuntu/ubuntulightitalic.woff") format("woff"), url("../fonts/ubuntu/ubuntulightitalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu"), url("ubuntu.woff2") format("woff2"), url("ubuntu.woff") format("woff"), url("ubuntu.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntu.woff2") format("woff2"), url("../fonts/ubuntu/ubuntu.woff") format("woff"), url("../fonts/ubuntu/ubuntu.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Italic"), local("Ubuntu-Italic"), url("ubuntuitalic.woff2") format("woff2"), url("ubuntuitalic.woff") format("woff"), url("ubuntuitalic.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntuitalic.woff2") format("woff2"), url("../fonts/ubuntu/ubuntuitalic.woff") format("woff"), url("../fonts/ubuntu/ubuntuitalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Medium"), local("Ubuntu-Medium"), url("ubuntumedium.woff2") format("woff2"), url("ubuntumedium.woff") format("woff"), url("ubuntumedium.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntumedium.woff2") format("woff2"), url("../fonts/ubuntu/ubuntumedium.woff") format("woff"), url("../fonts/ubuntu/ubuntumedium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Medium Italic"), local("Ubuntu-MediumItalic"), url("ubuntumediumitalic.woff2") format("woff2"), url("ubuntumediumitalic.woff") format("woff"), url("ubuntumediumitalic.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntumediumitalic.woff2") format("woff2"), url("../fonts/ubuntu/ubuntumediumitalic.woff") format("woff"), url("../fonts/ubuntu/ubuntumediumitalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Bold"), local("Ubuntu-Bold"), url("ubuntubold.woff2") format("woff2"), url("ubuntubold.woff") format("woff"), url("ubuntubold.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntubold.woff2") format("woff2"), url("../fonts/ubuntu/ubuntubold.woff") format("woff"), url("../fonts/ubuntu/ubuntubold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: local("Ubuntu Bold Italic"), local("Ubuntu-BoldItalic"), url("ubuntubolditalic.woff2") format("woff2"), url("ubuntubolditalic.woff") format("woff"), url("ubuntubolditalic.ttf") format("truetype");
+  src: url("../fonts/ubuntu/ubuntubolditalic.woff2") format("woff2"), url("../fonts/ubuntu/ubuntubolditalic.woff") format("woff"), url("../fonts/ubuntu/ubuntubolditalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
@@ -66,6 +66,7 @@ html, body {
 
 html {
   font-size: 16px;
+  font-weight: 400;
 }
 
 body {
@@ -93,14 +94,24 @@ body.stiky {
 
 .container {
   width: 100%;
-  max-width: 1180px;
-  padding: 0 15px;
+  height: 100%;
+  padding: 0 67px;
   margin: auto;
 }
 
-@media (max-width: 1180px) {
+@media (min-width: 1540px) {
   .container {
-    max-width: 100%;
+    width: 1540px;
+    margin: auto;
+    padding: 0 70px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .container {
+    width: 1170px;
+    margin: auto;
+    padding: 0 70px;
   }
 }
 
@@ -192,4 +203,49 @@ ol,
 p,
 ul {
   margin: 0;
+}
+
+.header {
+  min-height: 165px;
+  background: #ffffff;
+  box-shadow: 0px 1px 21px 0px rgba(57, 62, 107, 0.75);
+}
+
+.header-wrapper {
+  height: 100%;
+}
+
+.nav {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  cursor: pointer;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+
+.burger__one, .burger__two, .burger__three {
+  width: 100%;
+  height: 3px;
+  background: #0da088;
+  margin-top: 17px;
+  backface-visibility: hidden;
+  transition-duration: .3s;
+  display: block;
+}
+
+.burger__one {
+  margin-top: 0;
 }
