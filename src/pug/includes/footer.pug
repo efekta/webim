@@ -1,8 +1,55 @@
-.footer
+footer.footer
+    .container
+        .footer-wrapp
+            .footer-copy
+                img.footer-copy__pic(src="img/logo-footer.png" alt="Логотип")
+                p.footer-copy__content Webim 2008 - 2020
+                p.footer-copy__content Все права защищены
+            .footer-content
+                .footer-content__item
+                    ul.footer-contact
+                        li.footer-contact__item
+                            a.footer-contact__link.footer-contact__link-big(href="tel:+78005004932")
+                                span.footer-contact__ico
+                                    i.fas.fa-phone
+                                span +7 800 500 49 32
+                        li.footer-contact__item
+                            a.footer-contact__link(href="tel:+74993223754")
+                                span +7 (499) 322-37-54
+                                p.footer-contact__adress Москва, Серебряническая набережная, 29
+                        li.footer-contact__item
+                            a.footer-contact__link(href="tel:+74993223754")
+                                span +7 (499) 322-37-54
+                                p.footer-contact__adress Санкт-петербург, Чкаловский проспект, 15
+
+                .footer-content__item
+                    ul.footer-list
+                        li.footer-list__item
+                            a.footer-list__link contact@webim.ru
+                        li.footer-list__item
+                            a.footer-list__link sales@webim.ru
+                        li.footer-list__item
+                            p.footer-list__clock понедельник - пятница с 10.00 - 18.00
+                    ul.footer-social
+                        li.footer-social__item
+                            a.footer-social__link Вконтакте
+                                i.fab.fa-vk
+                        li.footer-social__item
+                            a.footer-social__link Facebook
+                                i.fab.fa-facebook-f
+                        li.footer-social__item
+                            a.footer-social__link Twitter
+                                i.fab.fa-twitter
+                        li.footer-social__item
+                            a.footer-social__link Skype
+                                i.fab.fa-skype
+
+
 
 
 
 include ./modals.pug
 script(src="libs/jquery/jquery-3.4.1.min.js")
+script(src="libs/fontawesome/svg-with-js/js/fontawesome-all.min.js")
 script(src="libs/maskedinput/jquery.maskedinput.min.js")
 script(src="js/common.js")
