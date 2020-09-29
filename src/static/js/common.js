@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    //wow
+    new WOW().init();
     // loader
     $(window).on('load', function () {
         var $preloader = $('#preloader'),
