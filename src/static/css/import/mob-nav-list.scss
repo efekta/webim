@@ -1,0 +1,23 @@
+.mob-nav {
+  position: absolute;
+  top: 130px;
+  left: -2000px;
+  width: 100%;
+  background: $white;
+  padding: 20px;
+  transition: all .3s ease-in-out;
+  &.show {
+    left: 0;
+  }
+}
+.mob-nav__item {
+  margin-bottom: 20px;
+}
+.mob-nav__link {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: $dark;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
